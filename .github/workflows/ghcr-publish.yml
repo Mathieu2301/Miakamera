@@ -18,5 +18,5 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image
       run: |
-        docker build . --tag ghcr.io/Mathieu2301/Miakamera:latest
-        docker push ghcr.io/Mathieu2301/Miakamera:latest
+        docker build . --tag ghcr.io/Mathieu2301/miakamera:latest
+        docker push ghcr.io/Mathieu2301/miakamera:latest
