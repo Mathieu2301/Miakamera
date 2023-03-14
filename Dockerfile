@@ -1,6 +1,8 @@
 FROM alpine:3.17.1
 RUN apk add --update vlc
 
+LABEL org.opencontainers.image.source=https://github.com/mathieu2301/miakamera
+
 # create user
 ARG USER=default
 ENV HOME /home/$USER
