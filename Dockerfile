@@ -23,4 +23,5 @@ RUN adduser -D $USER \
 USER $USER
 WORKDIR $HOME
 
-CMD echo "Starting VLC..." && sudo crond && eval $VLC
+CMD echo "Starting VLC..." && sudo crond
+ENTRYPOINT vlc
