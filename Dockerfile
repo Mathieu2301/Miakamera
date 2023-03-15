@@ -23,5 +23,5 @@ RUN adduser -D $USER \
 USER $USER
 WORKDIR $HOME
 
-CMD echo "Starting VLC..." && sudo crond
-ENTRYPOINT vlc
+COPY --chown=$USER:$USER entrypoint.sh $HOME/entrypoint.sh
+ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
