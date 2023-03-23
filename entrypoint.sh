@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 sudo crond
 echo 'Starting VLC...'
