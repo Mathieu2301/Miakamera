@@ -18,9 +18,9 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the Docker image for amd64
       run: |
-        docker build . --tag --platform=linux/amd64 ghcr.io/mathieu2301/miakamera:latest-amd64
+        docker build . --platform=linux/amd64 --tag ghcr.io/mathieu2301/miakamera:latest-amd64
         docker push ghcr.io/mathieu2301/miakamera:latest-amd64
     - name: Build the Docker image for arm64
       run: |
-        docker build . --tag --platform=linux/arm64 ghcr.io/mathieu2301/miakamera:latest-arm64
+        docker build . --platform=linux/arm64 --tag ghcr.io/mathieu2301/miakamera:latest-arm64
         docker push ghcr.io/mathieu2301/miakamera:latest-arm64
