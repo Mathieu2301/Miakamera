@@ -16,11 +16,15 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build the Docker image for amd64
+    - name: Build the Docker image
       run: |
-        docker build . --platform=linux/amd64 --tag ghcr.io/mathieu2301/miakamera:latest-amd64
-        docker push ghcr.io/mathieu2301/miakamera:latest-amd64
-    - name: Build the Docker image for arm64
-      run: |
-        docker build . --platform=linux/arm64 --tag ghcr.io/mathieu2301/miakamera:latest-arm64
-        docker push ghcr.io/mathieu2301/miakamera:latest-arm64
+        docker build . --platform=linux/arm64 --tag ghcr.io/mathieu2301/miakamera:latest
+        docker push ghcr.io/mathieu2301/miakamera:latest
+  # - name: Build the Docker image for amd64
+  #   run: |
+  #     docker build . --platform=linux/amd64 --tag ghcr.io/mathieu2301/miakamera:latest-amd64
+  #     docker push ghcr.io/mathieu2301/miakamera:latest-amd64
+  # - name: Build the Docker image for arm64
+  #   run: |
+  #     docker build . --platform=linux/arm64 --tag ghcr.io/mathieu2301/miakamera:latest-arm64
+  #     docker push ghcr.io/mathieu2301/miakamera:latest-arm64
