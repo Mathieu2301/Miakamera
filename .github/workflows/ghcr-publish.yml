@@ -27,7 +27,7 @@ jobs:
       with:
         push: true
         tags: ghcr.io/mathieu2301/miakamera:latest
-        platform: linux/amd64,linux/arm64
+        platforms: linux/amd64,linux/arm64
   # - name: Build the Docker image
   #   run: |
   #     docker buildx build --platform linux/amd64,linux/arm64 --tag ghcr.io/mathieu2301/miakamera:latest . --push
