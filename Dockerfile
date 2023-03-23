@@ -24,4 +24,4 @@ USER $USER
 WORKDIR $HOME
 
 COPY --chown=$USER:$USER entrypoint.sh $HOME/entrypoint.sh
-ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
+ENTRYPOINT ["/bin/ash", "entrypoint.sh"]
