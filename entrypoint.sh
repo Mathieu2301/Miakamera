@@ -1,5 +1,5 @@
 #!/bin/ash
 
-sudo crond
 echo 'Starting VLC...'
 vlc $@
+echo 'VLC has exited.'
